@@ -1,0 +1,22 @@
+{
+  "name": "hiraka",
+  "version": "1.0.0",
+  "description": "first official theme from mimr moghimi",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "keywords": [
+    "theme"
+  ],
+  "author": "Mohammadreza Moghimi",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-compass": "^2.1.0",
+    "npm": "^6.14.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
