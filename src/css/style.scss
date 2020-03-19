@@ -59,56 +59,64 @@ nav {
 }
 
 .navbar section.navbar-right a:nth-child(1) {
-  background-color: #fe355c;
+  background-color: #fe355c !important;
   color: white !important;
 }
 
 .navbar section.navbar-right a:nth-child(2) {
-  background-color: #f2b016;
+  background-color: #f2b016 !important;
   color: white !important;
 }
 
 .navbar section.navbar-right a:nth-child(3) {
-  background-color: #ffe70e;
+  background-color: #ffe70e !important;
   color: black !important;
 }
 
 .navbar section.navbar-right a:nth-child(4) {
-  background-color: #7435aa;
+  background-color: #7435aa !important;
   color: white !important;
 }
 
 .navbar section.navbar-right a:nth-child(5) {
-  background-color: #07aedf;
+  background-color: #07aedf !important;
   color: white !important;
 }
 
 .navbar section.navbar-right a:nth-child(6) {
-  background-color: #8A967F;
+  background-color: #8A967F !important;
   color: white !important;
 }
 
 .navbar section.navbar-right a:nth-child(7) {
-  background-color: #d3b362;
+  background-color: #d3b362 !important;
   color: white !important;
 }
 
 .navbar section.navbar-right a:nth-child(8) {
-  background-color: #e67e22;
+  background-color: #e67e22 !important;
   color: white !important;
 }
 
 .navbar section.navbar-right a:nth-child(9) {
-  background-color: #e74c3c;
+  background-color: #e74c3c !important;
   color: white !important;
 }
 
 .navbar section.navbar-right a:nth-child(10) {
-  background-color: #f39c12;
+  background-color: #f39c12 !important;
   color: white !important;
 }
 
+.navbar section.navbar-right a:nth-child(n) {
+  background-color: #8A967F;
+  color: white !important;
+}
 
+.navbar section.navbar-right a:nth-child(n+2) {
+  background-color: #7435aa;
+  color: white !important;
+}
 
 .mimpush .nav-item:nth-child(1) {
   background-color: #fe355c;
