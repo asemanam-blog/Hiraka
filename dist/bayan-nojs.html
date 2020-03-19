@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head><!--{{{-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--bayan-tags--><!--{{{-->
+    <head:meta></head:meta>
+    <head:style></head:style>
+    <head:script></head:script>
+    <!--bayan-tags--><!--}}}-->
+    <link href="http://bayanbox.ir/download/5288479852257857761/favicon.ico" rel="shortcut icon">
+</head><!--}}}-->
+  <body><!--{{{-->
+    <!--header--><!--{{{-->
+      <header id="top">
+        <div class="container grid-xl navbar pushbar_main_content">
+          <div class="responsive-menu-right navbar-section" mimr-pushbar-target="mypushbar-right">
+          </div>
+            <check:if blog_image>
+              <a href="(*blog_link*)" name="(*blog_title*)" class="logo navbar-section" style="margin-bottom: 10px;">
+                <img class="m-auto" style="height: 100px" src="(*blog_image*)" alt="(*blog_title*)">
+              </a>
+            </check:if>
+            <check:if not blog_image>
+              <a href="(*blog_link*)" name="(*blog_title*)" class="logo navbar-section">
+                <h1 class="text-center w-100" style="font-size: 45px;">
+                  (*blog_title*)
+                </h1>
+              </a>
+            </check:if>
+          <div class="responsive-menu-left navbar-section mypushbar-left" mimr-pushbar-target="mypushbar-left">
+          </div>
+        </div>
+      </header>
+    <!--header--><!--}}}-->
+    <!--navigation--><!--{{{-->
+      <nav class="hide-md" style="margin-bottom: 10px;">
+        <div class="container grid-xl">
+          <div class="columns">
+            <div class="column navigationer">
+              <div class="navbar hide-sm">
+                <!--right-navbar--><!--{{{-->
+                  <box:categories>
+                    <section class="navbar-section navbar-right">
+                      <view:categories>
+                          <!--<i class="icon icon-arrow-left text-light"></i>-->
+                          <a class="(*category_selected*) hvr-push hide-md text-light nav-item" href="(*category_link*)" style="font-size: 17px;">(*category_name*)</a>
+                      </view:categories>
+                    </section>
+                  </box:categories>
+                <!--right-navbar--><!--}}}-->
+                <!--left-navbar--><!--{{{-->
+                  <box:menu>
+                    <section class="navbar-section navbar-left" style="flex-grow: .7;">
+                      <!--<i class="icon icon-menu text-light menu-icon  show-md hide-sm " style="left: 15px;" mimr-pushbar-target="mypushbar-left"></i>-->
+                      <view:menu>
+                        <a class="(*menu_item_selected*) hide-md hvr-push text-light nav-item" href="(*menu_item_link*)" style="font-size: 17px;">(*menu_item_title*)</a>
+                      </view:menu>
+                    </section>
+                  </box:menu>
+                <!--left-navbar--><!--}}}-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <!--navigation--><!--}}}-->
+    <!--navigation-nojs--><!--{{{-->
+      <div class="container navbar my-2" style="margin-top: 0 !important; padding-right: 0; padding-left: 0;">
+        <section class="columns navbar-right w-100" style="margin-right: 0;">
+          <box:categories>
+            <view:categories>
+              <a style="border: 2px solid white;" class="(*category_selected*) py-2 column col-6 hvr-push hide-xl hide-lg show-md show-sm text-center" href="(*category_link*)">
+                (*category_name*)
+              </a>
+            </view:categories>
+          </box:categories>
+
+          <box:menu>
+            <view:menu>
+              <a style="border: 2px solid white;" class="(*menu_item_selected*) py-2 column col-6 hvr-push hide-xl hide-lg show-md show-sm text-center" href="(*menu_item_link*)">
+                (*menu_item_title*)
+              </a>
+            </view:menu>
+          </box:menu>
+        </section>
+      </div>
+    <!--navigation-nojs--><!--}}}-->
+    <!--content--><!--{{{-->
+      <div class="container grid-xl">
+        <!--messages-of-bayan--><!--{{{-->
+          <box:messages>
+            <div class="columns">
+              <div class="column col-12">
+                <view:messages>
+                  <div class="toast toast(*message_type*)">
+                    (*message*)
+                  </div>
+                </view:messages>
+              </div>
+            </div>
+          </box:messages>  
+        <!--messages-of-bayan--><!--}}}-->
+        <div class="columns">
+          <!--main--><!--{{{-->
+          <div class="column col-8 col-md-12 col-sm-12">
+              <!--frontpage--><!--{{{-->
+                <section class="frontpage">
+                  <!--list--><!--{{{-->
+                    <box:post_list>
+                      <div class="columns">
+                        <view:post_list>
+                          <div class="column col-6 col-md-12 col-sm-12 front-image-list">
+                            <!--list-image--><!--{{{-->
+                            <check:if post_image>
+                              <a href="(*post_link*)">
+                                <img class="img-responsive" style="border-radius: 10px; margin: 10px auto;" src="(*post_image*)" alt="(*post_title*)">
+                              </a>
+                            </check:if>
+                            <!--list-image--><!--}}}-->
+                            <!--list-title--><!--{{{-->
+                            <a href="(*post_link*)">
+                              <h2 style="font-size: 1rem; font-weight: bold; font-family: vazir;">
+                                (*post_title*)
+                              </h2>
+                            </a>
+                            <!--list-title--><!--}}}-->
+                            <!--list-detail--><!--{{{-->
+                            <div class="post-list-detail text-gray px-2" style="font-size: 14px; margin-bottom: .4rem">
+                              <div class="columns">
+                                <div class="post-list-author" style="margin: 0 .6rem;">
+                                    <i class="icon icon-people"></i>
+                                  توسط
+                                  <span class="mx-1 text-success">
+                                    (*post_author*)
+                                  </span>
+                                </div>
+                                <span class="text-gray">|</span>
+                                <div class="post-list-date" style="margin: 0 .6rem;">
+                                  <div>
+                                    <i class="icon icon-time"></i>
+                                    (*post_date format="%e %B %y"*)
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--list-detail--><!--}}}-->
+                            (*post_summary*)
+                            <!--list-continue--><!--{{{-->
+                            <div class="columns">
+                              <!--continue-botton--><!--{{{-->
+                              <div class="column col-4">
+                                <check:if post_has_read_more>
+                                  <a class="btn btn-success" href="(*post_link*)">ادامه‌ی مطلب</a>
+                                </check:if>
+                              </div>
+                              <!--continue-botton--><!--}}}-->
+                              <!--like-buttons--><!--{{{-->
+                              <div class="column col-4 text-center" style="box-sizing: border-box; padding-top: 5px;">
+                                <box:post_rating>
+                                    <span class="rate-box (*user_rated*)">
+                                      <span class="rate-button-box rate-up (*user_rated_up*)">
+                                        <a class="btn btn-link rate-button" href="(*rate_up_link*)" rel="nofollow" title="like">
+                                          (*up_rates*)
+                                          <i class="icon icon-arrow-up"></i>
+                                        </a>
+                                      </span>
+                                      <span class="rate-button-box mx-2 rate-down (*user_rated_down*)">
+                                        <a class="btn btn-link rate-button" href="(*rate_down_link*)" rel="nofollow" title="dislike">
+                                          (*down_rates*)
+                                          <i class="icon icon-arrow-down"></i>
+                                        </a>
+                                      </span>
+                                    </span>
+                                  </box:post_rating>
+                              </div>
+                              <!--like-buttons--><!--}}}-->
+                              <!--comment-bottons--><!--{{{-->
+                              <div class="column col-4 text-center" style="box-sizing: border-box; padding-top: 10px;">
+                                <check:if post_has_comments_section>
+                                  <div class="rate-boxs">
+                                    <a href="(*post_link*)#comments" class="badge" mimr-badge="(*post_comment_count*)">
+                                      نظرات
+                                      </a>
+                                  </div>
+                                </check:if>
+                              </div>
+                              <!--comment-bottons--><!--}}}-->
+                            </div>
+                            <!--list-continue--><!--}}}-->
+                          </div>
+                        </view:post_list> 
+                      </div>
+                    </box:post_list>
+                  <!--list--><!--}}}-->
+                  <!--pagination--><!--{{{-->
+                  <box:pagination>
+                    <ul class="pagination" style="margin-bottom: 10px;">
+                      <li class="page-item page-prev">
+                        <check:if page_prev>
+                          <a href="(*page_prev*)">
+                            <div class="page-item-subtitle">صفحه‌ی</div>
+                            <div class="page-item-title h5">قبلی</div>
+                          </a>
+                        </check:if>
+                      </li>
+                      <li class="page-item page-next">
+                        <check:if page_next>
+                          <a href="(*page_next*)">
+                            <div class="page-item-subtitle">صفحه‌ی</div>
+                            <div class="page-item-title h5">بعدی</div>
+                          </a>
+                        </check:if>
+                      </li>
+                    </ul>
+                  </box:pagination>
+                  <!--pagination--><!--}}}-->
+                </section>
+              <!--frontpage--><!--}}}-->
+              <!--post--><!--{{{-->
+                <section class="post">
+                  <box:post_detail>
+                    <!--main-post--><!--{{{--> 
+                      <!--breadcrumb--><!--{{{-->
+
+                      <!--breadcrumb--><!--}}}-->
+                      <!--first-detail-post--><!--{{{-->
+                        <div class="navbar p-relative bg-dark" style="width: 100%; height: 40px; border-top-right-radius: 10px; margin-top: 10px; border-top-left-radius: 10px; z-index: 2;">
+                          <div class="navbar-section">
+                            <figure class="avatar avatar-lg p-relative m-1" style="border: 4px solid #303742; right: 10px;">
+                              <img src="(*post_author_avatar*)" alt="(*post_author*)">
+                              <i class="avatar-presence online"></i>
+                            </figure>
+                            <div class="p-relative d-flex" style="right: 12px; bottom: 7px; font-size: 14px;">
+                              <span class="text-gray mx-1">نویسنده: </span>
+                              <div class="text-light">(*post_author*)</div>
+                            </div>
+                            <div class="post-list-date p-relative d-flex" style="right: 30px; bottom: 7px;font-size: 14px;">
+                                <i class="icon icon-time text-gray mx-2" style="bottom: -3px;"></i>
+                                <span class="text-gray">
+                                  (*post_date format="%e %B %y"*)
+                                </span>
+                            </div>
+                          </div>
+                        </div>
+                      <!--first-detail-post--><!--}}}-->
+                      <div class="p-relative">
+                      <!--image-post--><!--{{{-->
+                      <check:if post_image>
+                        <img class="img-fit-cover" style="width: 100%; border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;" src="(*post_image*)" alt="(*post_title*)">
+                      </check:if>
+                      <!--image-post--><!--}}}-->
+                       <!--category-post --><!--{{{-->
+                       <box:post_categories>
+                        <div class="p-absolute" style="bottom: 20px; right: 10px; opacity: .9;">
+                          <view:post_categories>
+                            <a href="(*category_link*)" target="_blank" class="m-1 label label-primary bg-dark">(*category_name*)</a>
+                          </view:post_categories>
+                        </div>
+                       </box:post_categories>
+                       <!--category-post --><!--}}}-->
+                      </div>
+                      <!--title-post--><!--{{{-->
+                          <h1 class="mx-2 text-primary" style="font-family: vazir; font-size: 1.2rem; font-weight: bold; margin-top: 1rem; margin-bottom: 1rem;">
+                            (*post_title*)
+                          </h1>
+                      <!--title-post--><!--}}}-->
+                      <!--content-post--><!--{{{-->
+                      <div class="post-full-content">
+                        (*post_full_content*)
+                      </div>
+                      <!--content-post--><!--}}}-->
+                      <!--tag-post--><!--{{{-->
+                      <box:post_tags>
+                        <span class="my-1 d-inline-block bg-primary text-light p-1 s-rounded" style="margin-top: 20px !important;">برچسب‌ها</span>
+                        <div class="d-block">
+                          <view:post_tags>
+                            <a href="(*tag_link*)" target="_blank" class="my-1 label label-secondary">(*tag_name*)</a>
+                          </view:post_tags>
+                        </div>
+                      </box:post_tags>
+                      <!--tag-post--><!--}}}-->
+                      <!--second-detail-post--><!--{{{-->
+                        <div class="container my-2 bg-secondary s-rounded">
+                          <div class="navbar p-relative" style="top: 3px;">
+                            <!--social-sharing--><!--{{{-->
+                              <div class="navbar-section">
+                                <a target="_blank" href="https://twitter.com/intent/tweet?url=http://asemanam.blog.ir(*post_link*)&amp;status=(*post_title*)+http://asemanam.blog.ir(*post_link*)">
+                                  <div class="label mx-1" style="width: 30px; background: none;">
+                                    <svg role="img" viewBox="0 0 24 24"><title>Twitter</title><path style="fill: #1DA1F2" d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"></path></svg>
+                                  </div>
+                                </a>
+                                <a target="_blank" href="https://www.addtoany.com/add_to/whatsapp?linkurl=http://asemanam.blog.ir(*post_link*)&amp;linkname=(*post_title*)">
+                                  <div class="label mx-1" style="width: 30px; background: none;">
+                                    <svg role="img" viewBox="0 0 24 24"><title>WhatsApp</title><path style="fill: #25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+                                  </div>
+                                </a>
+                                <a target="_blank" href="https://www.addtoany.com/add_to/telegram?linkurl=http://asemanam.blog.ir(*post_link*)&amp;linkname=(*post_title*)">
+                                  <div class="label mx-1" style="width: 30px; background: none;">
+                                    <svg role="img" viewBox="0 0 24 24"><title>Telegram</title><path style="fill: #2CA5E0" d="M23.91 3.79L20.3 20.84c-.25 1.21-.98 1.5-2 .94l-5.5-4.07-2.66 2.57c-.3.3-.55.56-1.1.56-.72 0-.6-.27-.84-.95L6.3 13.7l-5.45-1.7c-1.18-.35-1.19-1.16.26-1.75l21.26-8.2c.97-.43 1.9.24 1.53 1.73z"></path></svg>
+                                  </div>
+                                </a>
+                                <a target="_blank" href="mailto:?subject=(*post_title*)&amp;body=سلام یه نگاهی به این بنداز<br>http://asemanam.blog.ir(*post_link*)">
+                                  <div class="label mx-1" style="width: 30px; background: none;">
+                                    <svg role="img" viewBox="0 0 24 24"><title>Gmail</title><path style="fill: #D14836" d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"></path></svg>
+
+                                  </div>
+                                </a>
+                              </div>
+                            <!--social-sharing--><!--}}}-->
+                            <!--rating-buttons--><!--{{{-->
+                              <div class="navbar-section">
+                                <box:post_rating>
+                                    <span class="rate-box (*user_rated*)">
+                                      <span class="rate-button-box rate-up (*user_rated_up*)">
+                                        <a class="btn btn-link rate-button" href="(*rate_up_link*)" rel="nofollow" title="like" style="color: #2ed573;">
+                                          (*up_rates*)
+                                          <i class="icon icon-arrow-up"></i>
+                                        </a>
+                                      </span>
+                                      <span class="rate-button-box mx-2 rate-down (*user_rated_down*)">
+                                        <a class="btn btn-link rate-button" href="(*rate_down_link*)" rel="nofollow" title="dislike" style="color: #ff6b81;">
+                                          (*down_rates*)
+                                          <i class="icon icon-arrow-down"></i>
+                                        </a>
+                                      </span>
+                                    </span>
+                                  </box:post_rating>
+                              </div>
+                              <!--like-buttons--><!--}}}-->
+                          </div>
+                        </div>
+                      <!--second-detail-post--><!--}}}-->
+                    <!--main-post--><!--}}}-->
+                    <!--comment-post--><!--{{{-->
+                      <box:post_comments>
+                        <a name="comments"></a>
+                        <div class="my-2">
+                          <div class="columns">
+                            <div class="speech-bubble text-light" style="padding: 30px; margin: 5px auto;">
+                              <h4 style="font-family: vazir, sans-serif;">
+                                تا حالا<span style="font-size: 70px; padding-right: 5px;">(*post_comment_count*)</span>  تا نظر داشتیم!
+                              </h4>
+                            </div>
+                          </div>
+                          <div class="columns" style="height: 80px;">
+                            <div class="avatar avatar-xl p-relative" style="margin: 35px auto;left: 38px;bottom: 20px;">
+                              <img src="(*post_author_avatar*)" alt="(*post_author*)" style="border: 2px solid #8b8ae4;">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-2">
+                          <view:post_comments>
+                            <a name="comment-(*comment_id*)"></a>
+                            <!--sent-comments--><!--{{{-->
+                              <div class="p-relative" style="border: 1px solid #8382e2; border-radius: 30px;border-top-right-radius: 25px;margin: 40px auto; box-shadow: 0 4px 40px #d7d4db;">
+                                  <!--first-row--><!--{{{-->
+                                  <div class="columns">
+                                      <a class="p-relative" target="_blank" href="(*comment_website*)" style="bottom: 10px;">
+                                        <figure class="avatar avatar-xl" style="background: none;">
+                                          <img src="(*comment_avatar*)" alt="(*comment_fullname*)" style="border: 2px solid #8b8ae4">
+                                          <i class="avatar-presence offline"></i>
+                                        </figure>
+                                      </a>
+                                      <div class="d-inline p-2" style="margin-right: .5rem; margin-top: .2rem;">
+                                        <check:if comment_fullname>
+                                          <a class="d-block" target="_blank" href="(*comment_link*)">
+                                            <i class="icon icon-bookmark p-1"></i>
+                                              (*comment_fullname*)
+                                          </a>
+                                        </check:if>
+                                        <check:if comment_website>
+                                          <a class="d-block kirito" target="blank" href="(*comment_website*)">
+                                            <i class="icon icon-link p-1"></i>
+                                            (*comment_website*)
+                                          </a>
+                                        </check:if>
+                                      </div>
+                                  </div>
+                                  <!--first-row--><!--}}}-->
+                                  <!--second-row--><!--{{{-->
+                                  <div class="columns">
+                                    <div class="column">
+                                      <div class="text-justify" style="box-sizing: border-box;padding-right: 1.3rem;padding-left: 1.3rem;margin-top: .5rem;margin-bottom: .5rem;">
+                                        (*comment_body*)
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--second-row--><!--}}}-->
+                                  <!--third-row--><!--{{{-->
+                                  <div class="columns">
+                                    <div class="column">
+                                      <div class="text-primary" style="box-sizing: border-box;padding-right: 1.3rem;padding-left: 1.3rem;margin-top: .5rem;margin-bottom: 1rem;">
+                                        <i class="icon icon-time p-1"></i>
+                                        (*comment_date format="%e %B %y"*)
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--third-row--><!--}}}-->
+                              </div>
+                            <!--sent-comments--><!--}}}-->
+                            <check:if comment_reply>
+                            <!--reply-comment--><!--{{{-->
+                              <div class="p-relative" style="border: 1px solid #8382e2; border-radius: 30px;border-top-right-radius: 25px;margin: 40px auto; box-shadow: 0 4px 40px #d7d4db;">
+                                  <!--first-row--><!--{{{-->
+                                  <div class="columns" style="direction: ltr;">
+                                      <a class="p-relative" target="_blank" href="(*blog_link*)" style="bottom: 10px;">
+                                        <figure class="avatar avatar-xl" style="background: none;">
+                                          <img src="(*comment_reply_avatar*)" alt="(*comment_reply_fullname*)" style="border: 2px solid #8b8ae4">
+                                          <i class="avatar-presence online"></i>
+                                        </figure>
+                                      </a>
+                                      <div class="d-inline p-2" style="margin-right: .5rem; margin-top: .2rem; direction: rtl;">
+                                        <check:if comment_reply_fullname>
+                                          <a class="d-block" target="_blank" href="(*blog_link*)">
+                                              (*comment_reply_fullname*)
+                                            <i class="icon icon-bookmark p-1"></i>
+                                          </a>
+                                        </check:if>
+                                          <a class="d-block" target="blank" href="(*comment_link*)">
+                                            پاسخ کامنت
+                                            <i class="icon icon-edit p-1"></i>
+                                          </a>
+                                      </div>
+                                  </div>
+                                  <!--first-row--><!--}}}-->
+                                  <!--second-row--><!--{{{-->
+                                  <div class="columns">
+                                    <div class="column">
+                                      <div class="text-justify" style="box-sizing: border-box;padding-right: 1.3rem;padding-left: 1.3rem;margin-top: .5rem;margin-bottom: .5rem;">
+                                        (*comment_reply*)
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--second-row--><!--}}}-->
+                                  <!--third-row--><!--{{{-->
+                                  <div class="columns">
+                                    <div class="column">
+                                      <div class="text-primary" style="box-sizing: border-box;padding-right: 1.3rem;padding-left: 1.3rem;margin-top: .5rem;margin-bottom: 1rem;">
+                                        <i class="icon icon-time p-1"></i>
+                                        (*comment_reply_date format="%e %B %y"*)
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--third-row--><!--}}}-->
+                              </div>
+                            <!--reply-comment--><!--}}}-->
+                            </check:if>
+                          </view:post_comments>
+                        </div>
+                        <!--add-comment--><!--{{{-->
+                        <check:if post_has_send_comment>
+                        <a name="send_comment"></a>
+                          <div class="comment-add-form my-2" style="margin-bottom: 40px !important;">
+                            (*comment_add_form*)
+                          </div>
+                        </check:if>
+                        <!--add-comment--><!--}}}-->
+                      </box:post_comments>
+                    <!--comment-post--><!--}}}-->
+                  </box:post_detail>
+                </section>
+              <!--post--><!--}}}-->
+              <!--page--><!--{{{-->
+                <section class="post">
+                  <box:page_detail>
+                    <!--main-page--><!--{{{--> 
+                      <!--breadcrumb--><!--{{{-->
+
+                      <!--breadcrumb--><!--}}}-->
+                      
+                      <!--title-page--><!--{{{-->
+                          <h1 class="mx-2 text-primary" style="font-family: vazir; font-size: 1.2rem; font-weight: bold; margin-top: 1rem; margin-bottom: 1rem;">
+                            (*page_title*)
+                          </h1>
+                      <!--title-page--><!--}}}-->
+                      <!--content-page--><!--{{{-->
+                      <div class="page-full-content">
+                        (*page_content*)
+                      </div>
+                      <!--content-page--><!--}}}-->
+                      
+                      <!--second-detail-page--><!--{{{-->
+                        <div class="container my-2 bg-secondary s-rounded">
+                          <div class="navbar p-relative" style="top: 3px;">
+                            <!--social-sharing--><!--{{{-->
+                              <div class="navbar-section">
+                                <a target="_blank" href="https://twitter.com/intent/tweet?url=http://asemanam.blog.ir(*page_link*)&amp;status=(*page_title*)+http://asemanam.blog.ir(*page_link*)">
+                                  <div class="label mx-1" style="width: 30px; background: none;">
+                                    <svg role="img" viewBox="0 0 24 24"><title>Twitter</title><path style="fill: #1DA1F2" d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"></path></svg>
+                                  </div>
+                                </a>
+                                <a target="_blank" href="https://www.addtoany.com/add_to/whatsapp?linkurl=http://asemanam.blog.ir(*page_link*)&amp;linkname=(*page_title*)">
+                                  <div class="label mx-1" style="width: 30px; background: none;">
+                                    <svg role="img" viewBox="0 0 24 24"><title>WhatsApp</title><path style="fill: #25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+                                  </div>
+                                </a>
+                                <a target="_blank" href="https://www.addtoany.com/add_to/telegram?linkurl=http://asemanam.blog.ir(*page_link*)&amp;linkname=(*page_title*)">
+                                  <div class="label mx-1" style="width: 30px; background: none;">
+                                    <svg role="img" viewBox="0 0 24 24"><title>Telegram</title><path style="fill: #2CA5E0" d="M23.91 3.79L20.3 20.84c-.25 1.21-.98 1.5-2 .94l-5.5-4.07-2.66 2.57c-.3.3-.55.56-1.1.56-.72 0-.6-.27-.84-.95L6.3 13.7l-5.45-1.7c-1.18-.35-1.19-1.16.26-1.75l21.26-8.2c.97-.43 1.9.24 1.53 1.73z"></path></svg>
+                                  </div>
+                                </a>
+                                <a target="_blank" href="mailto:?subject=(*page_title*)&amp;body=سلام یه نگاهی به این بنداز<br>http://asemanam.blog.ir(*page_link*)">
+                                  <div class="label mx-1" style="width: 30px; background: none;">
+                                    <svg role="img" viewBox="0 0 24 24"><title>Gmail</title><path style="fill: #D14836" d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"></path></svg>
+
+                                  </div>
+                                </a>
+                              </div>
+                            <!--social-sharing--><!--}}}-->
+                           
+                          </div>
+                        </div>
+                      <!--second-detail-page--><!--}}}-->
+                    <!--main-page--><!--}}}-->
+                    <!--comment-page--><!--{{{-->
+                      <box:page_comments>
+                        <a name="comments"></a>
+                        <div class="my-2">
+                          <div class="columns">
+                            <div class="speech-bubble text-light" style="padding: 30px; margin: 5px auto;">
+                              <h4 style="font-family: vazir, sans-serif;">
+                                تا حالا<span style="font-size: 70px; padding-right: 5px;">(*page_comment_count*)</span>  تا نظر داشتیم!
+                              </h4>
+                            </div>
+                          </div>
+                          <div class="columns" style="margin-bottom: 80px;">
+                            <br>
+                          </div>
+                        </div>
+                        <div class="my-2">
+                          <view:page_comments>
+                            <a name="comment-(*comment_id*)"></a>
+                            <!--sent-comments--><!--{{{-->
+                              <div class="p-relative" style="border: 1px solid #8382e2; border-radius: 30px;border-top-right-radius: 25px;margin: 40px auto; box-shadow: 0 4px 40px #d7d4db;">
+                                  <!--first-row--><!--{{{-->
+                                  <div class="columns">
+                                      <a class="p-relative" target="_blank" href="(*comment_website*)" style="bottom: 10px;">
+                                        <figure class="avatar avatar-xl" style="background: none;">
+                                          <img src="(*comment_avatar*)" alt="(*comment_fullname*)" style="border: 2px solid #8b8ae4">
+                                          <i class="avatar-presence offline"></i>
+                                        </figure>
+                                      </a>
+                                      <div class="d-inline p-2" style="margin-right: .5rem; margin-top: .2rem;">
+                                        <check:if comment_fullname>
+                                          <a class="d-block" target="_blank" href="(*comment_link*)">
+                                            <i class="icon icon-bookmark p-1"></i>
+                                              (*comment_fullname*)
+                                          </a>
+                                        </check:if>
+                                        <check:if comment_website>
+                                          <a class="d-block kirito" target="blank" href="(*comment_website*)">
+                                            <i class="icon icon-link p-1"></i>
+                                            (*comment_website*)
+                                          </a>
+                                        </check:if>
+                                      </div>
+                                  </div>
+                                  <!--first-row--><!--}}}-->
+                                  <!--second-row--><!--{{{-->
+                                  <div class="columns">
+                                    <div class="column">
+                                      <div class="text-justify" style="box-sizing: border-box;padding-right: 1.3rem;padding-left: 1.3rem;margin-top: .5rem;margin-bottom: .5rem;">
+                                        (*comment_body*)
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--second-row--><!--}}}-->
+                                  <!--third-row--><!--{{{-->
+                                  <div class="columns">
+                                    <div class="column">
+                                      <div class="text-primary" style="box-sizing: border-box;padding-right: 1.3rem;padding-left: 1.3rem;margin-top: .5rem;margin-bottom: 1rem;">
+                                        <i class="icon icon-time p-1"></i>
+                                        (*comment_date format="%e %B %y"*)
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--third-row--><!--}}}-->
+                              </div>
+                            <!--sent-comments--><!--}}}-->
+                            <check:if comment_reply>
+                            <!--reply-comment--><!--{{{-->
+                              <div class="p-relative" style="border: 1px solid #8382e2; border-radius: 30px;border-top-right-radius: 25px;margin: 40px auto; box-shadow: 0 4px 40px #d7d4db;">
+                                  <!--first-row--><!--{{{-->
+                                  <div class="columns" style="direction: ltr;">
+                                      <a class="p-relative" target="_blank" href="(*blog_link*)" style="bottom: 10px;">
+                                        <figure class="avatar avatar-xl" style="background: none;">
+                                          <img src="(*comment_reply_avatar*)" alt="(*comment_reply_fullname*)" style="border: 2px solid #8b8ae4">
+                                          <i class="avatar-presence online"></i>
+                                        </figure>
+                                      </a>
+                                      <div class="d-inline p-2" style="margin-right: .5rem; margin-top: .2rem; direction: rtl;">
+                                        <check:if comment_reply_fullname>
+                                          <a class="d-block" target="_blank" href="(*blog_link*)">
+                                              (*comment_reply_fullname*)
+                                            <i class="icon icon-bookmark p-1"></i>
+                                          </a>
+                                        </check:if>
+                                          <a class="d-block" target="blank" href="(*comment_link*)">
+                                            پاسخ کامنت
+                                            <i class="icon icon-edit p-1"></i>
+                                          </a>
+                                      </div>
+                                  </div>
+                                  <!--first-row--><!--}}}-->
+                                  <!--second-row--><!--{{{-->
+                                  <div class="columns">
+                                    <div class="column">
+                                      <div class="text-justify" style="box-sizing: border-box;padding-right: 1.3rem;padding-left: 1.3rem;margin-top: .5rem;margin-bottom: .5rem;">
+                                        (*comment_reply*)
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--second-row--><!--}}}-->
+                                  <!--third-row--><!--{{{-->
+                                  <div class="columns">
+                                    <div class="column">
+                                      <div class="text-primary" style="box-sizing: border-box;padding-right: 1.3rem;padding-left: 1.3rem;margin-top: .5rem;margin-bottom: 1rem;">
+                                        <i class="icon icon-time p-1"></i>
+                                        (*comment_reply_date format="%e %B %y"*)
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--third-row--><!--}}}-->
+                              </div>
+                            <!--reply-comment--><!--}}}-->
+                            </check:if>
+                          </view:page_comments>
+                        </div>
+                        <!--add-comment--><!--{{{-->
+                        <check:if page_has_send_comment>
+                        <a name="send_comment"></a>
+                          <div class="comment-add-form my-2" style="margin-bottom: 40px !important;">
+                            (*comment_add_form*)
+                          </div>
+                        </check:if>
+                        <!--add-comment--><!--}}}-->
+                      </box:page_comments>
+                    <!--comment-page--><!--}}}-->
+                  </box:page_detail>
+                </section>
+              <!--page--><!--}}}-->
+              <a id="scroller" class="p-fixed btn-lg scroll text-light bg-dark" style="z-index: 100; right: 30px; bottom: 30px; opacity: .9; border-radius: 50%; width: 50px; height: 50px; text-align: center;" href="#top">
+                <i class="icon icon-arrow-up" style="top: 12px;"></i>
+              </a>
+          </div>
+          <!--main--><!--}}}-->
+          <!--sidebar--><!--{{{-->
+            <div class="columns col-4 col-md-12 col-sm-12 hide-md">
+                <section class="sidebar p-2" style="width: 100%;">
+                  <div class="container">
+                    <!--followBox--><!--{{{-->
+                      <check:if follow_box>
+                        <div class="bayan-follow front-image-list">
+                          (*follow_box*)
+                        </div>
+                      </check:if>
+                    <!--followBox--><!--}}}-->
+                    <!--recent-posts--><!--{{{-->
+                      <check:if not index_page1_selected>
+                        <div class="box-titles d-inline-block bg-primary p-2 text-light text-center" style="margin-right: 30px; border-top-right-radius: 5px; border-top-left-radius: 5px;">
+                          تازه‌ها
+                        </div>
+                        <div class="bg-primary box-titles" style="margin-right: 30px; height: 1px;"></div>
+                        <box:recent_posts>
+                          <div class="box-recent-posts front-image-list">
+                            <view:recent_posts max="5">
+                            <div class="navbar">
+                              <div class="navbar-section">
+                                <div class="box-recent-posts-image m-2 d-inline">
+                                  <check:if post_image>
+                                    <a href="(*post_link*)">
+                                      <img class="m-2" src="(*post_image*)" alt="(*post_title*)" style="border-radius: 10px; width: 120px;">
+                                    </a>
+                                  </check:if>
+                                </div>
+                                <div class="box-recent-left d-inline">
+                                  <div class="box-recent-posts-title d-block">
+                                    <a href="(*post_link*)">
+                                      <h6 class="text-bold" style="font-size: .7rem;">(*post_title*)</h6>
+                                    </a>
+                                  </div>
+                                  <div class="box-recent-posts-data d-block text-gray" style="font-size: .7rem;">
+                                    <i class="icon icon-time"></i>
+                                    (*post_date format="%e %B %y"*)
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                              <div class="divider"></div>
+                            </view:recent_posts>
+                          </div>
+                        </box:recent_posts>
+                      </check:if>
+                    <!--recent-posts--><!--}}}-->
+                    <!--tags-box --><!--{{{-->
+                    <box:tag_cloud max="25">
+                        <div class="box-titles d-block bg-dark p-2 text-light text-center" style="margin-right: 30px; border-top-right-radius: 5px; border-top-left-radius: 5px;">
+                          برچسب‌های موضوعی
+                        </div>
+                        <div class="bg-success box-titles" style="margin-right: 30px; height: 1px;"></div>
+                      <div class="box-tags front-image-list my-2">
+                        <view:tag_cloud>
+                          <check:if tag_is_first>
+                            <a class="m-1 label label-primary" href="(*tag_link*)">(*tag_name*)</a>
+                          </check:if>
+                          <check:if not tag_is_first>
+                            <check:if tag_selected>
+                              <a class="m-1 label label-success" href="(*tag_link*)">(*tag_name*)</a>
+                            </check:if>
+                            <check:if not tag_selected>
+                              <a class="m-1 label label-secondary" href="(*tag_link*)">(*tag_name*)</a>
+                            </check:if>
+                          </check:if>
+                        </view:tag_cloud>
+                      </div>
+                    </box:tag_cloud>
+                    <!--tags-box --><!--}}}-->
+                    <!--daily-links--><!--{{{-->
+                    <box:daily_links>
+                        <div class="box-titles d-block bg-warning p-2 text-dark text-center" style="margin-right: 30px; border-top-right-radius: 5px; border-top-left-radius: 5px;">
+                          لینکهای پیشنهادی
+                        </div>
+                        <div class="bg-error box-titles" style="margin-right: 30px; height: 1px;"></div>
+                      <div class="my-2 box-daily-links front-image-list">
+                        <view:daily_links>
+                        <div class="chip">
+                          <i class="icon icon-location" style="margin-left: 5px;"></i>
+                          <a target="_blank" href="(*link_url*)" alt="(*link_alt*)">(*link_name*)</a>
+                        </div>
+                        </view:daily_links>
+                      </div>
+                    </box:daily_links>
+                    <!--daily-links--><!--}}}-->
+                    <!--recent-comments--><!--{{{-->
+                        <box:recent_comments>
+                          <div class="box-titles d-inline-block bg-primary p-2 text-light text-center" style="margin-right: 30px; border-top-right-radius: 5px; border-top-left-radius: 5px;">
+                            تازه‌ترین نظرات
+                          </div>
+                          <div class="bg-primary box-titles" style="margin-right: 30px; height: 1px;"></div>
+                          <div class="box-recent-posts front-image-list">
+                            <view:recent_comments max="4">
+                            <div class="navbar">
+                              <div class="navbar-section">
+                                <div class="box-recent-posts-image m-2 d-inline">
+                                  <a href="(*comment_link*)">
+                                    <figure class="m-2 avatar avatar-xl">
+                                      <img src="(*comment_avatar*)" alt="(*comment_fullname*)">
+                                      <i class="avatar-presence away"></i>
+                                    </figure>
+                                  </a>
+                                </div>
+                                <div class="box-recent-left d-inline">
+                                  <div class="box-recent-posts-title d-block">
+                                    <a href="(*comment_link*)">
+                                      <p class="my-2" style="font-size: .7rem;">(*comment_body_text max="100"*)</p>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                              <div class="divider"></div>
+                            </view:recent_comments>
+                          </div>
+                        </box:recent_comments>
+                    <!--recent-comments--><!--}}}-->
+                    <!--archive-box--><!--{{{-->
+                      <box:archive>
+                          <div class="box-titles d-block bg-primary p-2 text-light text-center" style="margin-right: 30px; border-top-right-radius: 5px; border-top-left-radius: 5px;">
+                            آرشیو
+                          </div>
+                          <div class="bg-dark box-titles" style="margin-right: 30px; height: 1px;"></div>
+                        <div class="my-2 box-daily-links front-image-list">
+                          <view:archive>
+                          <check:if archive_selected>
+                            <div class="chip bg-success">
+                              <div class="text-bold text-warning" style="margin-left: 5px; padding: 1px; border-radius: 40%;">(*link_count*)</div>
+                              <a class="text-light" href="(*link_url*)" >(*link_name*)</a>
+                            </div>
+                          </check:if>
+                          <check:if not archive_selected>
+                            <div class="chip">
+                              <div class="text-bold text-error" style="margin-left: 5px; padding: 1px; background-color: white; border-radius: 40%;">(*link_count*)</div>
+                              <a href="(*link_url*)" >(*link_name*)</a>
+                            </div>
+                          </check:if>
+                          </view:archive>
+                        </div>
+                      </box:archive>
+                    <!--archive-box--><!--}}}-->
+                    <!--links-box--><!--{{{-->
+                      <box:links>
+                          <div class="box-titles d-block bg-secondary p-2 text-dark text-center" style="margin-right: 30px; border-top-right-radius: 5px; border-top-left-radius: 5px;">
+                            لینک‌های مفید
+                          </div>
+                          <div class="bg-primary box-titles" style="margin-right: 30px; height: 1px;"></div>
+                        <div class="my-2 box-daily-links front-image-list">
+                          <view:links>
+                          <div class="chip">
+                            <i class="icon icon-check" style="margin-left: 5px;"></i>
+                            <a target="_blank" href="(*link_url*)" alt="(*link_alt*)">(*link_name*)</a>
+                          </div>
+                          </view:links>
+                        </div>
+                      </box:links>
+                    <!--links-box--><!--}}}-->
+                  </div>
+                </section>
+            </div>
+          <!--sidebar--><!--}}}-->
+        </div>
+      </div>
+    <!--content--><!--}}}-->
+    <!--footer--><!--{{{-->
+<!-- Matomo Image Tracker--><!--{{{-->
+<img src="https://asemanam.ir/piwik/matomo/matomo.php?idsite=3&amp;rec=1" style="border:0" alt="" />
+<!-- End Matomo --><!--}}}-->
+      <footer>
+            <!--top-footer--><!--{{{-->
+        <div class="py-2 bg-primary">
+          <div class="container grid-sm text-center p-2" style="padding-top: .7rem !important">
+            <div class="columns">
+              <div class="column">
+                <a class="hvr-push" target="_blank" href="">
+                  <svg class="social" role="img" viewBox="0 0 24 24"><title>Twitter</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"></path></svg>
+                </a>
+              </div>
+              <div class="column">
+                <a class="hvr-push" target="_blank" href="">
+                  <svg class="social" role="img" viewBox="0 0 24 24"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path></svg>
+                </a>
+              </div>
+              <div class="column">
+                <a class="hvr-push" target="_blank" href="">
+                  <svg class="social" role="img" viewBox="0 0 24 24"><title>Telegram</title><path d="M23.91 3.79L20.3 20.84c-.25 1.21-.98 1.5-2 .94l-5.5-4.07-2.66 2.57c-.3.3-.55.56-1.1.56-.72 0-.6-.27-.84-.95L6.3 13.7l-5.45-1.7c-1.18-.35-1.19-1.16.26-1.75l21.26-8.2c.97-.43 1.9.24 1.53 1.73z"></path></svg>
+                </a>
+              </div>
+              <div class="column">
+                <a class="hvr-push" target="_blank" href="">
+                  <svg class="social" role="img" viewBox="0 0 24 24"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+                </a>
+              </div>
+              <div class="column">
+                <a class="hvr-push" target="_blank" href="(*rss_link*)">
+                  <svg class="social" role="img" viewBox="0 0 24 24"><title>RSS</title><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"></path></svg>
+                </a>
+              </div>
+              <div class="column">
+                <a class="hvr-push" target="_blank" href="">
+                  <svg class="social" role="img" viewBox="0 0 24 24"><title>Gmail</title><path d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+            <!--top-footer--><!--}}}-->
+        <!--bottom-footer--><!--{{{-->
+        <div class="text-light p-1" style="background: #3c3b9f !important;">
+            <div class="container grid-xl">
+              <div class="columns">
+                <div class="fbayan column col-6 col-sm-12 text-center py-1" style="margin: auto;">
+                  <!--right-bottom-footer--><!--{{{-->
+                  قدرت گرفته از بلاگ
+                  <a href="http://bayan.ir">بیان</a>
+                  <!--right-bottom-footer--><!--}}}-->
+                </div>
+                <div class="column col-6 col-sm-12 text-center">
+                  <!--left-bottom-footer--><!--{{{-->
+                    <div class="py-2">
+                      <p class="d-inline">ساخته‌ای برآمده از</p>
+                      <span class="d-inline" style="color: #eb4d4b">♥</span>
+                      <p class="d-inline">توسط</p>
+                    <a class="d-inline text-light" href="http://mimr.ir">محمدرضا ...</a>
+                    </div>
+                  <!--left-bottom-footer--><!--}}}-->
+                </div>
+              </div>
+            </div>
+        </div>
+        <!--bottom-footer--><!--}}}-->
+      </footer>
+    <!--footer--><!--}}}-->
+</body><!--}}}-->
+</html>
