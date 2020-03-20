@@ -14,7 +14,7 @@
     <!--header--><!--{{{-->
       <header id="top">
         <div class="container grid-xl navbar pushbar_main_content">
-          <div class="responsive-menu-right navbar-section" mimr-pushbar-target="mypushbar-right">
+          <div class="responsive-menu-right navbar-section" style="flex-grow: .1;">
           </div>
             <check:if blog_image>
               <a href="(*blog_link*)" name="(*blog_title*)" class="logo navbar-section" style="margin-bottom: 10px;">
@@ -22,13 +22,13 @@
               </a>
             </check:if>
             <check:if not blog_image>
-              <a href="(*blog_link*)" name="(*blog_title*)" class="logo navbar-section">
+              <a href="(*blog_link*)" name="(*blog_title*)" class="logo navbar-section" style="max-width: 100%;">
                 <h1 class="text-center w-100" style="font-size: 45px;">
                   (*blog_title*)
                 </h1>
               </a>
             </check:if>
-          <div class="responsive-menu-left navbar-section mypushbar-left" mimr-pushbar-target="mypushbar-left">
+          <div class="responsive-menu-left navbar-section mypushbar-left" style="flex-grow: .1;">
           </div>
         </div>
       </header>
