@@ -52,7 +52,6 @@
                 <!--left-navbar--><!--{{{-->
                   <box:menu>
                     <section class="navbar-section navbar-left" style="flex-grow: .7;">
-                      <!--<i class="icon icon-menu text-light menu-icon  show-md hide-sm " style="left: 15px;" mimr-pushbar-target="mypushbar-left"></i>-->
                       <view:menu>
                         <a class="(*menu_item_selected*) hide-md hvr-push text-light nav-item" href="(*menu_item_link*)" style="font-size: 17px;">(*menu_item_title*)</a>
                       </view:menu>
@@ -179,8 +178,9 @@
                               <div class="column col-4 text-center" style="box-sizing: border-box; padding-top: 10px;">
                                 <check:if post_has_comments_section>
                                   <div class="rate-boxs">
-                                    <a href="(*post_link*)#comments" class="badge" mimr-badge="(*post_comment_count*)">
-                                      نظرات
+                                    <a href="(*post_link*)#comments" class="badge" >
+                                      <div class="mx-1">(*post_comment_count*)</div>
+                                      نظر
                                       </a>
                                   </div>
                                 </check:if>
