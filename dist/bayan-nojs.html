@@ -12,22 +12,15 @@
 </head><!--}}}-->
   <body><!--{{{-->
     <!--header--><!--{{{-->
-      <header id="top">
+      <header id="top" style="background: linear-gradient(to right, #ad5389, #3c1053);">
         <div class="container grid-xl navbar pushbar_main_content">
           <div class="responsive-menu-right navbar-section" style="flex-grow: .1;">
           </div>
-            <check:if blog_image>
-              <a href="(*blog_link*)" name="(*blog_title*)" class="logo navbar-section" style="margin-bottom: 10px;">
-                <img class="m-auto" style="height: 100px" src="(*blog_image*)" alt="(*blog_title*)">
-              </a>
-            </check:if>
-            <check:if not blog_image>
-              <a href="(*blog_link*)" name="(*blog_title*)" class="logo navbar-section" style="max-width: 100%;">
+              <a href="(*blog_link*)" name="(*blog_title*)" class="logo navbar-section text-light" style="max-width: 100%;">
                 <h1 class="text-center w-100" style="font-size: 45px;">
                   (*blog_title*)
                 </h1>
               </a>
-            </check:if>
           <div class="responsive-menu-left navbar-section mypushbar-left" style="flex-grow: .1;">
           </div>
         </div>
