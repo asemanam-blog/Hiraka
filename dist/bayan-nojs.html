@@ -111,11 +111,20 @@
                             </check:if>
                             <!--list-image--><!--}}}-->
                             <!--list-title--><!--{{{-->
-                            <a href="(*post_link*)">
-                              <h2 style="font-size: 1rem; font-weight: bold; font-family: vazir;">
-                                (*post_title*)
-                              </h2>
-                            </a>
+                            <check:if post_image>
+                              <a href="(*post_link*)">
+                                <h2 style="font-size: 1rem; font-weight: bold; font-family: vazir;">
+                                  (*post_title*)
+                                </h2>
+                              </a>
+                            </check:if>
+                            <check:if not post_image>
+                              <a href="(*post_link*)">
+                                <h2 style="font-size: 1rem; font-weight: bold; font-family: vazir; margin-top: 10px;">
+                                  (*post_title*)
+                                </h2>
+                              </a>
+                            </check:if>
                             <!--list-title--><!--}}}-->
                             <!--list-detail--><!--{{{-->
                             <div class="post-list-detail text-gray px-2" style="font-size: 14px; margin-bottom: .4rem">
