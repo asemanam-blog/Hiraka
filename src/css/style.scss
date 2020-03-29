@@ -24,6 +24,14 @@ body {
   font-family: vazir, sans-serif;
 }
 
+.footer-up {
+  background-color: $footer-up-color;
+}
+
+.footer-bottom {
+  background-color: $footer-color;
+}
+
 #scroller {
   visibility: hidden;
   //top:calc(100% / 2);
@@ -34,7 +42,7 @@ body {
 
 nav {
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;  
-  background: #7435AA;  /* fallback for old browsers */
+  background: $theme-color;  /* fallback for old browsers */
   //background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  [> Chrome 10-25, Safari 5.1-6 <]
   //background: linear-gradient(to right, #4A00E0, #8E2DE2); [> W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ <]
 }
