@@ -693,7 +693,7 @@
                         </div>
                         <div class="bg-primary box-titles" style="margin-right: 30px; height: 1px;"></div>
                           <div class="box-recent-posts front-image-list">
-                            <view:recent_posts max="5">
+                            <view:popular_posts max="5">
                             <div class="navbar">
                               <div class="navbar-section">
                                 <div class="box-recent-posts-image m-2 d-inline">
@@ -717,7 +717,7 @@
                               </div>
                             </div>
                               <div class="divider"></div>
-                            </view:recent_posts>
+                            </view:popular_posts>
                           </div>
                         </box:popular_posts>
                     <!--recent-posts--><!--}}}-->
@@ -728,7 +728,7 @@
                         </div>
                         <div class="bg-primary box-titles" style="margin-right: 30px; height: 1px;"></div>
                           <div class="box-recent-posts front-image-list">
-                            <view:recent_posts max="5">
+                            <view:most_visited_posts max="5">
                             <div class="navbar">
                               <div class="navbar-section">
                                 <div class="box-recent-posts-image m-2 d-inline">
@@ -752,9 +752,44 @@
                               </div>
                             </div>
                               <div class="divider"></div>
-                            </view:recent_posts>
+                            </view:most_visited_posts>
                           </div>
                         </box:most_visited_posts>
+                    <!--recent-posts--><!--}}}-->
+                    <!--most-commented-posts--><!--{{{-->
+                        <box:most_commented_posts>
+                        <div class="box-titles d-inline-block bg-primary p-2 text-light text-center" style="margin-right: 30px; border-top-right-radius: 5px; border-top-left-radius: 5px;">
+                          پر بحث‌ترین‌ها
+                        </div>
+                        <div class="bg-primary box-titles" style="margin-right: 30px; height: 1px;"></div>
+                          <div class="box-recent-posts front-image-list">
+                            <view:most_commented_posts max="5">
+                            <div class="navbar">
+                              <div class="navbar-section">
+                                <div class="box-recent-posts-image m-2 d-inline">
+                                  <check:if post_image>
+                                    <a href="(*post_link*)">
+                                      <img class="m-2" src="(*post_image*)" alt="(*post_title*)" style="border-radius: 10px; width: 120px;">
+                                    </a>
+                                  </check:if>
+                                </div>
+                                <div class="box-recent-left d-inline">
+                                  <div class="box-recent-posts-title d-block">
+                                    <a href="(*post_link*)">
+                                      <h6 class="text-bold" style="font-size: .7rem;">(*post_title*)</h6>
+                                    </a>
+                                  </div>
+                                  <div class="box-recent-posts-data d-block text-gray" style="font-size: .7rem;">
+                                    <i class="icon icon-time"></i>
+                                    (*post_date format="%e %B %y"*)
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                              <div class="divider"></div>
+                            </view:most_commented_posts>
+                          </div>
+                        </box:most_commented_posts>
                     <!--recent-posts--><!--}}}-->
                     <!--tags-box --><!--{{{-->
                     <box:tag_cloud max="25">
@@ -1087,7 +1122,7 @@
                         </div>
                         <div class="bg-primary box-titles" style="margin-right: 30px; height: 1px;"></div>
                           <div class="box-recent-posts front-image-list">
-                            <view:recent_posts max="5">
+                            <view:popular_posts max="5">
                             <div class="navbar">
                               <div class="navbar-section">
                                 <div class="box-recent-posts-image m-2 d-inline">
@@ -1111,7 +1146,7 @@
                               </div>
                             </div>
                               <div class="divider"></div>
-                            </view:recent_posts>
+                            </view:popular_posts>
                           </div>
                         </box:popular_posts>
                     <!--recent-posts--><!--}}}-->
@@ -1122,7 +1157,7 @@
                         </div>
                         <div class="bg-primary box-titles" style="margin-right: 30px; height: 1px;"></div>
                           <div class="box-recent-posts front-image-list">
-                            <view:recent_posts max="5">
+                            <view:most_visited_posts max="5">
                             <div class="navbar">
                               <div class="navbar-section">
                                 <div class="box-recent-posts-image m-2 d-inline">
@@ -1146,9 +1181,44 @@
                               </div>
                             </div>
                               <div class="divider"></div>
-                            </view:recent_posts>
+                            </view:most_visitd_posts>
                           </div>
                         </box:most_visited_posts>
+                    <!--recent-posts--><!--}}}-->
+                    <!--most-commented-posts--><!--{{{-->
+                        <box:most_commented_posts>
+                        <div class="box-titles d-inline-block bg-primary p-2 text-light text-center" style="margin-right: 30px; border-top-right-radius: 5px; border-top-left-radius: 5px;">
+                          پر بحث‌ترین‌ها
+                        </div>
+                        <div class="bg-primary box-titles" style="margin-right: 30px; height: 1px;"></div>
+                          <div class="box-recent-posts front-image-list">
+                            <view:most_commented_posts max="5">
+                            <div class="navbar">
+                              <div class="navbar-section">
+                                <div class="box-recent-posts-image m-2 d-inline">
+                                  <check:if post_image>
+                                    <a href="(*post_link*)">
+                                      <img class="m-2" src="(*post_image*)" alt="(*post_title*)" style="border-radius: 10px; width: 120px;">
+                                    </a>
+                                  </check:if>
+                                </div>
+                                <div class="box-recent-left d-inline">
+                                  <div class="box-recent-posts-title d-block">
+                                    <a href="(*post_link*)">
+                                      <h6 class="text-bold" style="font-size: .7rem;">(*post_title*)</h6>
+                                    </a>
+                                  </div>
+                                  <div class="box-recent-posts-data d-block text-gray" style="font-size: .7rem;">
+                                    <i class="icon icon-time"></i>
+                                    (*post_date format="%e %B %y"*)
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                              <div class="divider"></div>
+                            </view:most_commented_posts>
+                          </div>
+                        </box:most_commented_posts>
                     <!--recent-posts--><!--}}}-->
             <!--tags-box --><!--{{{-->
             <box:tag_cloud max="25">
