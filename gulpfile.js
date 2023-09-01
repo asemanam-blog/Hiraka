@@ -1,26 +1,11 @@
-var gulp = require('gulp'),
-  compass = require('gulp-compass');
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+  
 
 gulp.task('compass', function() {
   return gulp.src('src/main.scss')
-    .pipe(compass({
-      sass: 'src',
-      image: 'src/img',
-      css: 'dist',
-      sourcemap: true,
-      style: 'compressed'
-    }));
-});
-
-gulp.task('compass-nojs', function() {
-  return gulp.src('src/main-nojs.scss')
-    .pipe(compass({
-      sass: 'src',
-      image: 'src/img',
-      css: 'dist',
-      sourcemap: true,
-      style: 'compressed'
-    }));
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('default', function() {

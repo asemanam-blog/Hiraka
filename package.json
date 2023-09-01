@@ -14,7 +14,9 @@
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-compass": "^2.1.0",
-    "npm": "^6.14.2"
+    "gulp-sass": "^5.1.0",
+    "npm": "^6.14.2",
+    "sass": "^1.66.1"
   },
   "devDependencies": {
     "eslint": "^6.8.0"
