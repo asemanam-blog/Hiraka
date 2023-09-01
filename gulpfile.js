@@ -8,6 +8,12 @@ gulp.task('compass', function() {
     .pipe(gulp.dest('./dist/'));
 });
 
+gulp.task('compass-nojs', function() {
+  return gulp.src('src/main-nojs.scss')
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(gulp.dest('./dist/'));
+});
+
 gulp.task('default', function() {
   gulp.watch('src/css/**/*.scss', gulp.series('compass'));
 });
